@@ -26,14 +26,15 @@ console.log(arrowRight);
 
 
 // affiche un point
-let baliseImage = document.querySelector(".dots");
-baliseImage.classList.add("dot")
+// let baliseImage = document.querySelector(".dots");
+// baliseImage.classList.add("dot")
+
+const dots = document.querySelector(".dots");
 
 // afficher 4 points
-
 for (let i = 0; i < slides.length; i++) {
 
-	let baliseImage = document.querySelector(".dots");
-	baliseImage.classList.add("dot")
-	
+	const dot = document.createElement("div");
+    dot.classList.add("dot");
+	dots.appendChild(dot);
 }
