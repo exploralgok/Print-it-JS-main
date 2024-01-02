@@ -23,3 +23,17 @@ console.log(arrowLeft);
 
 let arrowRight = document.querySelector("#banner .arrow_right");
 console.log(arrowRight);
+
+
+// affiche un point
+let baliseImage = document.querySelector(".dots");
+baliseImage.classList.add("dot")
+
+// afficher 4 points
+
+for (let i = 0; i < slides.length; i++) {
+
+	let baliseImage = document.querySelector(".dots");
+	baliseImage.classList.add("dot")
+	
+}
