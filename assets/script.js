@@ -18,17 +18,30 @@ const slides = [
 ];
 
 
-let arrowLeft = document.querySelector("#banner .arrow_left");
-console.log(arrowLeft);
+// slider 
+let numero = 0;
 
-let arrowRight = document.querySelector("#banner .arrow_right");
-console.log(arrowRight);
+function ChangeSlide(sens) {
+    numero = numero + sens;
+    if (numero < 0)
+        numero = slides.length - 1;
+    if (numero > slides.length - 1)
+        numero = 0;
+    document.querySelector("#banner .banner-img").src = "./assets/images/slideshow/" + slides[numero]["image"];
+	document.querySelector("#banner .banner-txt").innerHTML = slides[numero]["tagLine"];
+}
 
+let arrowLeft = document.querySelector("#banner .arrow_left")
+arrowLeft.addEventListener("click", function () {
+	ChangeSlide(1)	 
+});
 
-// affiche un point
-// let baliseImage = document.querySelector(".dots");
-// baliseImage.classList.add("dot")
+let arrowRight = document.querySelector("#banner .arrow_right")
+arrowRight.addEventListener("click", function () {
+	ChangeSlide(-1)	 
+});
 
+// selection de la div parent pour ajouter la div enfant dans la boucle
 const dots = document.querySelector(".dots");
 
 // afficher 4 points
@@ -36,5 +49,12 @@ for (let i = 0; i < slides.length; i++) {
 
 	const dot = document.createElement("div");
     dot.classList.add("dot");
-	dots.appendChild(dot);
+	dots.appendChild(dot)
+
 }
+
+// dot selected
+
+if i = number
+
+
