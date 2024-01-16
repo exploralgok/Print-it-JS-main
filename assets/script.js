@@ -24,20 +24,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 	let slideActive = 0;
 	let bannerImage = document.querySelector("#banner .banner-img")
 	let bannerText = document.querySelector("#banner .banner-txt")
-	// selection de la div parent pour ajouter la div enfant dans la boucle
-	// const dots = document.querySelector("#banner .dots");
 
 	// creation tableau
 	let dots = []
 	
-	// dots.getElementsByClassName("dot");
-
 
 	// afficher 4 points
 	function generateDots() {
-		console.log("ok")
 		for (let i = 0; i < slides.length; i++) {
-			console.log("ok 2")
 			let dot = document.createElement("div");
 			dot.classList.add("dot");
 			document.querySelector("#banner .dots").appendChild(dot);
@@ -55,7 +49,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 			if (i == slideActive){
 				console.log(dots)
 				dots[i].classList.add("dot_selected");
-			// console.log(collection[i])
 			}
 		}
 	}
@@ -70,12 +63,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		bannerText.innerHTML = slides[slideActive]["tagLine"];
 
 		changeDotColor();
-		// const allDots = dots.querySelectorAll(".dot");
-		// console.log(dots)
-		// allDots[0].classList.add("dot_selected");
-		// console.log(dots.getElementsByClassName(".dot"))
-
-		// for (let i = 0; i < collection.length; i++) {
 	}
 
 
@@ -90,11 +77,5 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		changeSlide(1)	 
 	});
 
-	// dot selected
-
-	// if i = number
-	// dots.appendChild(dot_selected)
-
-	console.log("DOM fully loaded and parsed");
 
 });
